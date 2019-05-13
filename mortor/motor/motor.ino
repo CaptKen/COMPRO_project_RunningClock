@@ -25,7 +25,7 @@ void setup()
 
 void loop()
 {
-  if ("ultrasonic !=0")
+  if (distance > 60)
   {
     /* code */
   // Motor A
@@ -41,7 +41,7 @@ void loop()
     digitalWrite(backwardB, LOW);
     digitalWrite(forwardB, HIGH);
   }
-  else if (ultrasonic <= " ")
+  else if (distance <= 60)
   {
     /* code */
       // Motor A
@@ -54,8 +54,8 @@ void loop()
   // Motor B
 
     analogWrite(speedPinB, 255);
-    digitalWrite(backwardB, HIGH);
-    digitalWrite(forwardB, LOW);
+    digitalWrite(backwardB, LOW);
+    digitalWrite(forwardB, HIGH);
   }
   }
 }
